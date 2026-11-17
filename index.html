@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Télécharger mon fichier</title>
+<style>
+  :root {
+    --fond: #eef2f7;
+    --carte: #ffffff;
+    --texte: #1b2430;
+    --discret: #5d6b7c;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --bordure: #d6dde7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fond: #0f1620;
+      --carte: #17212e;
+      --texte: #e8edf4;
+      --discret: #98a6b8;
+      --accent: #5b8def;
+      --accent-hover: #7ba3f5;
+      --bordure: #293545;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    padding: 1.5rem;
+    background: var(--fond);
+    color: var(--texte);
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.5;
+  }
+  main {
+    width: 100%;
+    max-width: 30rem;
+    background: var(--carte);
+    border: 1px solid var(--bordure);
+    border-radius: 16px;
+    padding: 2rem;
+  }
+  h1 { margin: 0 0 .5rem; font-size: 1.6rem; }
+  p { margin: 0 0 1.5rem; color: var(--discret); }
+  .fichier {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .9rem 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px dashed var(--bordure);
+    border-radius: 10px;
+    font-size: .95rem;
+  }
+  .fichier span:last-child { color: var(--discret); white-space: nowrap; }
+  .bouton {
+    display: block;
+    text-align: center;
+    padding: .9rem 1rem;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background .15s;
+  }
+  .bouton:hover { background: var(--accent-hover); }
+  .bouton:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+</style>
+</head>
+<body>
+  <main>
+    <h1>Télécharger mon fichier</h1>
+    <p>Clique sur le bouton pour récupérer le fichier sur ton appareil.</p>
+
+    <!-- Remplace nom, taille et le lien href par les tiens -->
+    <div class="fichier">
+      <span>telecharger ici</span>
+      <span>616 Ko</span>
+    </div>
+
+    <a class="bouton" href="DB_Schenker_MAN_1.55.scs" download>Télécharger</a>
+  </main>
+</body>
+</html>
